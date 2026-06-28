@@ -29,15 +29,7 @@
 
 ## 주요 프로젝트
 
-| 프로젝트 | 설명 | 스택 |
-|----------|------|------|
-| [wj_healthcare_bot](https://github.com/uyan21/wj_healthcare_bot) | 의료기관 Telegram 봇 + 관리자 웹 패널 | Node.js, Telegraf, PostgreSQL |
-| [philip-youth-bot](https://github.com/uyan21/philip-youth-bot) | 청년부 신청 폼 + 문서 워터마크·유출 추적 | Python, SQLite |
-| [serverCulture-integrated](https://github.com/uyan21/serverCulture-integrated) | 문화부 통합 요청 관리 시스템 | TypeScript, React, Gemini API |
-| [doc-transformer](https://github.com/uyan21/doc-transformer) | DOCX/이미지/음성 → PDF·텍스트 변환 도구 | Node.js, LibreOffice, Whisper |
-| [devCrawler](https://github.com/uyan21/devCrawler) | DC인사이드 키워드 크롤러 + Telegram 알림 | Python |
-| [deepLearningStudy](https://github.com/uyan21/deepLearningStudy) | GAN·NST·LSTM 등 딥러닝 실험 노트북 | Python, Jupyter |
-| [cctel_bot_youtube](https://github.com/uyan21/cctel_bot_youtube) | YouTube 채널 관리 봇 + FastAPI 서버 | Python, FastAPI, Telegram |
+
 
 ---
 
