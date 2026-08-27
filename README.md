@@ -22,21 +22,21 @@
 **DB**  
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
 
-## 주요 프로젝트
-
-## 🛠️ Core Projects (서비스 개발 및 운영)
-
-| 프로젝트명 | 핵심 기능 및 아키텍처 | 기술 스택 | 주요 역할 및 기여 |
-| :--- | :--- | :--- | :--- |
-| **Hierarchical Org-Manager** | • **다계층 회원 및 권한 관리 시스템** (본사-지사-팀 구조)<br>• **모바일 임베디드 웹뷰(In-App Webview)** 기반의 패스워드리스 자동 인증 설계<br>• 모바일 환경 최적화 단일 웹앱(Single Page App) UI 제공 | FastAPI, SQLite, Vanilla JS, In-App Webview SDK, Nginx, systemd | • 백엔드 REST API 설계 및 권한 처리 필터 구현<br>• 모바일 사용자 경험 향상을 위한 웹 앱 프론트 개발<br>• Nginx 리버스 프록시 및 TLS 인증 배포 자동화 |
-| **Work Ticket & Request System** | • **실시간 티켓 기반 업무 요청 관리 플랫폼**<br>• 업무 상태 변화에 따른 **인스턴트 메신저 실시간 자동 알림** 연동<br>• 대용량 파일 첨부 및 처리 로그 추적 기능 | Node.js (Express), PostgreSQL, Real-time Messaging API, PM2 | • 관계형 DB 스키마 설계 및 파일 업로드 처리 로직 최적화<br>• 비동기 메시징 및 상태 머신(State Machine) 구현<br>• 시스템 모니터링 및 무중단 서버 운영 관리 |
-| **Workflow Automation Assistant** | • **신청서 접수 및 워크플로우 자동화 대화형 서비스**<br>• 신규 접수 현황 모니터링 대시보드와 유기적 연동<br>• 정형 데이터 입력 가이드 및 사용자 맞춤 상태 조회 | Python, FastAPI, Messenger Chatbot API, PostgreSQL | • 사용자 대화 흐름(Conversation Flow) 모델 구현<br>• 데이터 시각화 및 백오피스 통계 가공 API 작성 |
-| **Staff Scheduling & Matching Web** | • **가용 시간 기반 안내 스태프 스케줄 매칭 시스템**<br>• 교대 근무(Shift) 자동 할당 및 조율 알고리즘 적용<br>• 대시보드를 통한 직관적인 근무 현황 시각화 | Node.js (Vite), Express, SQLite, TypeScript | • 스케줄 충돌 방지 핵심 알고리즘 개발 및 최적화<br>• Vite 기반 프론트엔드 빌드 시스템 및 API 연동 |
-| **Resource Booking Platform** | • **공유 공간 및 물리 자원 실시간 예약 웹**<br>• 타임슬롯 기반 중복 예약 방지 알고리즘 적용<br>• 예약 승인 단계별 이메일/메시징 알림 프로세스 | Python (FastAPI/Flask), HTML5/CSS3, Nginx | • 예약 상태 관리 트랜잭션 처리 최적화<br>• 직관적이고 깔끔한 캘린더 인터페이스 UI 구현 |
-| **Metrics Tracking & Logger Service** | • **참여자 건강 지표 모니터링 및 로깅 서비스**<br>• 주기적 데이터 백업 및 Docker 컨테이너 기반 격리 운영<br>• 배치 처리 기반의 일간/주간 리포트 자동 생성 | Python, PostgreSQL, Docker, Messaging API | • Docker Compose 환경 구성 및 데이터 지속성(Volume) 설계<br>• 주기적 배치 작업(Scheduler)을 통한 통계 가공 |
-
----
-
+## 제가 만든 서비스와 한 일
+
+기술 이름보다, 실제로 어떤 문제를 해결했는지 중심으로 정리했습니다.
+
+| 만든 서비스 | 제가 한 일 |
+| :--- | :--- |
+| **조직·회원 관리** | 여러 단계로 나뉜 조직과 회원을 한곳에서 관리할 수 있게 만들었습니다. 사용자 역할에 따라 볼 수 있는 메뉴와 정보를 다르게 하고, 휴대폰에서도 간편하게 로그인하고 사용할 수 있도록 구성했습니다. 서버 설치와 보안 연결, 운영도 직접 맡았습니다. |
+| **업무 요청 관리** | 업무 요청을 접수한 뒤 진행 상황과 처리 기록을 한눈에 볼 수 있게 만들었습니다. 상태가 바뀌면 담당자에게 메신저 알림을 보내고, 큰 파일도 첨부할 수 있도록 구현했습니다. |
+| **신청·안내 자동화** | 사용자가 대화하듯 질문에 답하면 신청이 접수되고, 자신의 처리 상태도 확인할 수 있는 서비스를 만들었습니다. 접수 현황은 관리 화면에서 바로 확인할 수 있도록 연결했습니다. |
+| **근무 일정 배정** | 사람마다 가능한 시간을 받아 겹치지 않게 근무 일정을 짜는 서비스를 만들었습니다. 자동 배정 결과와 전체 근무 현황을 관리 화면에서 쉽게 확인할 수 있게 했습니다. |
+| **공간·장비 예약** | 사용 가능한 시간을 확인하고 공간이나 장비를 예약하는 서비스를 만들었습니다. 같은 시간에 예약이 겹치지 않도록 막고, 승인 단계마다 이메일이나 메신저로 알려주도록 했습니다. |
+| **건강 지표 기록·보고** | 참여자의 건강 관련 수치를 계속 기록하고 변화 추이를 확인할 수 있게 만들었습니다. 데이터를 주기적으로 백업하고, 일간·주간 보고서가 자동으로 만들어지도록 운영했습니다. |
+
+---
+
 ## 📚 Open Source & Utility Projects (공개 유틸리티 저장소)
 
 | 저장소명 | 구분 / 언어 | 주요 기능 및 핵심 개념 | 관련 기술 스택 |
